@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ca33be108d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">      
+      <div class="todo">
+        <div class="header">
+          <h1>ToDo</h1>
+          <h2>My Todos for Today</h2>
+          <hr>
+        
+        <ul>        
+            <% for(let i=0; i<listOfTodos.length; i++) {%>
+              <% if(listOfTodos[i].completed === true)  {%>
+              <li class="todoItem">                
+                  <span class="todo-text completed"><%= listOfTodos[i].todo %></span>
+                  <span class="done">Completed</span>                                   
+                <span class="del"><i class="fas fa-trash-alt"></i></span>                
+            </li>
+            <% }else{ %>
+              <li class="todoItem">                  
+                  <span class="todo-text"><%=listOfTodos[i].todo %></span>                  
+              <span class="del"><i class="fas fa-trash-alt"></i></span>                
+          </li><% } %>
+
+                <!-- <li class="todoItem">
+                    <% if(listOfTodos[i].completed === true)  {%>
+                      <span class="todo-text completed"><%= listOfTodos[i].todo %></span><span class="done">Completed</span>
+                    <% }else{ %>
+                        <span class="todo-text"><%=listOfTodos[i].todo %></span>
+                        <% } %>
+                    <span class="del"><i class="fas fa-trash-alt"></i></span>                
+                </li> -->
+            <% } %>     
+        </ul>        
+      </div> 
+      <hr>     
+      <div class="todo-form">
+          <form action="/createTodo" , method="POST">
+            <input type="text" placeholder="Enter new todo..." name="todoItem" />
+            <input type="submit" />
+          </form>
+      </div>
+      
+      <h3>Remaining Todo: <span class="left"><%=left%></span></h3>
+    </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

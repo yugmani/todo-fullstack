@@ -1,0 +1,101 @@
+/* html,
+body {
+  margin: 0;
+  /* padding: 0; */
+/* }  */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 45%;
+  text-align: center;
+  background-color: lightyellow;
+  padding: 15px;
+}
+
+.header h2 {
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0 auto;
+  width: 80%;
+  list-style-type: none;
+  text-align: left;
+  padding-right: 20px;
+}
+
+li {
+  padding: 3px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.del {
+  flex: 0.2;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.completed {
+  /* text-decoration: line-through; */
+  color: gray;
+}
+
+.todo-text {
+  flex: 0.5;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+span.done {
+  flex: 0.3;
+  font-size: 20px;
+  color: green;
+}
+
+/* ul > li:nth-child(odd) {
+  background-color: antiquewhite;
+} */
+
+.todo-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  margin-right: 10px;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+  color: gray;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+p span.left {
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 50%;
+}
