@@ -55,6 +55,9 @@ app.post("/createTodo", (req, res) => {
     .then((result) => {
       // console.log("Todo has been added!");
       res.redirect("/");
+    })
+    .catch((error) => {
+      console.log(error);
     });
 });
 
